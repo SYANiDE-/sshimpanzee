@@ -10,3 +10,4 @@ tuns/libtun.a
 utils/client/bin/dns2tcpd
 build/*
 tuns/combined/combiner_template_out.c
+tuns/websocket/*
