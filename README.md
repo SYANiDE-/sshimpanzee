@@ -16,6 +16,12 @@ sudo docker build . --platform arm64 --output .
 
 > You might need to enable env var DOCKER_BUILDKIT=1 
 
+(edit @SYANiDE-):
+like this->
+```
+DOCKER_BUILDKIT=1 docker build --ssh default . --output .
+```
+
 ### Compilation file
 
 Build is made based on the build.yaml file: 
