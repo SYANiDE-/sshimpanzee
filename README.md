@@ -19,7 +19,7 @@ sudo docker build . --platform arm64 --output .
 (edit @SYANiDE-):
 like this->
 ```
-DOCKER_BUILDKIT=1 docker build --ssh default . --output .
+DOCKER_BUILDKIT=1 docker build --ssh default . --output . && cat build/build.log
 ```
 
 ### Compilation file

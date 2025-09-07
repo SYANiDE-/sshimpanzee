@@ -8,7 +8,7 @@ import socket
 
 from src.data import banner, sshd_header, env_template
 from src.args import args, parser
-from src.keys import gen_keys, load_keys
+from src.keys import gen_HOST_keys, gen_CLIENT_keys, load_keys
 from src.cmd  import run_cmd
 import tuns.builder 
 
@@ -82,7 +82,9 @@ if __name__ == "__main__":
         build_dep()
 
     if args.keygen:              
-        gen_keys()
+        gen_HOST_keys()
+        if not args.public_key:
+            gen_CLIENT_keys()
     else:
         print("\t-> Skipping Key regen")
     

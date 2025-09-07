@@ -8,10 +8,10 @@ process_name: "sshimpanzee" # Name of the process as it appears in ps (yet you w
 
 banner: true # Should the banner be displayed at login
 
-shell: "/bin/sh" # Default shell to pop for user, bypassing /etc/passwd entries with false or nologin as shell
+shell: "/bin/bash" # Default shell to pop for user, bypassing /etc/passwd entries with false or nologin as shell
 timer: 60*1000*1000  # Time in milliseconds before a new sshimpanzee child is forked after exiting. For example in sock MODE, a new sshd connection will be made 1 minute after the previous one is dead
 
-keygen: true # Re generate keys during build, insure a new HOST and CLIENT keys is used
+keygen: true # Re generate keys during build, insure a new HOST keys (and CLIENT keys if public_key not supplied) is used
 public_key: #if new keys are not regenerated it is possible to specify a public client key to authenticate (only ed25519 keys are supported)
 #public key: "ssh-ed25519 .... ROGUE@ROGUE"
 
